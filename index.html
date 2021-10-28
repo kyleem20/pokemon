@@ -8,7 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>pokemon</title>
@@ -16,32 +16,54 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">pokemon</span>
+    <nav class="navbar navbar-dark navbar-expand bg-danger text-light no-select">
+      <a class="navbar-brand ms-3 p-3 bangers" href="#">
+        <h1 class="m-0">Pokemon</h1>
       </a>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+  <main class="container-fluid d-flex flex-column">
+    <div class="row flex-grow-1">
+      <div class="col-md-3 bg-grey p-3">
+        <h3 class="bangers">Wild Pokemon</h3>
+        <div class="m-2 spell-scroll" id="allPokemons">
+          <i class="mdi mdi-loading mdi-spin"></i>
         </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center py-5" id='active-pokemon'>
+        <!-- <div class="w-75 bg-white elevation-1 p-3 d-flex flex-column">
+          <div class="text-center">
+            <h3>Pokemon Name</h3>
+            <p><b>Nickname:</b> NICKNAME</p>
+            <p><b>Weight:</b> WEIGHT | <b>Height:</b> HEIGHT</p>
+            <p><b>Types:</b> TYPE </p>
+          </div>
+          <p>IMAGE</p>
+          <div class="d-flex justify-content-between justify-self-end mt-auto">
+            <div>
+              <input type="checkbox" name="caught" id="caught">
+              <label for="prepared">Caught</label>
+            </div>
+            <button class="btn btn-success">Catch</button>
+          </div>
+        </div> -->
+      </div>
+      <div class="col-md-3 bg-grey p-3">
+        <h3 class="bangers">Caught Pokemon</h3>
+        <div class="m-2 spell-scroll" id="my-pokemons"></div>
       </div>
     </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+  <footer class="bg-red border border-dark">
+    <div class="text-center no-select p-2">
+      <p><small>Made with 🐉🔥</small></p>
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 
